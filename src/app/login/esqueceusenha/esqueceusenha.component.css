@@ -1,0 +1,44 @@
+.esqueceusenha {
+  max-width: 450px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.esqueceusenha h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botao-mudar {
+  width: 55%;
+  padding: 12px;
+  background-color: #3A95DF;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.botao-mudar:hover {
+  transform: scale(1.1);
+}
+
+
+.requisitos {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}

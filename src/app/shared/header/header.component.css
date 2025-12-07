@@ -1,0 +1,33 @@
+header {
+  background-color: #2b96d6;
+  padding: 14px 0;
+  color: #fff;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px; /* opcional */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 25px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.brand img {
+  width: 60px;
+  height: 60px;
+}

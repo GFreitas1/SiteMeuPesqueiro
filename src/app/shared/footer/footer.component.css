@@ -1,0 +1,17 @@
+footer {
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer .terms a {
+  color: #3b82f6;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer .terms a:hover {
+  opacity: 0.8;
+}

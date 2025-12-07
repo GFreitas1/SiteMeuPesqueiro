@@ -1,0 +1,59 @@
+.document-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  line-height: 1.7;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #222;
+}
+
+.romano{
+  list-style: none;
+}
+.email{
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #333;
+  border-left: 5px solid #3A95DF;
+  padding-left: 10px;
+}
+
+h3 {
+  margin-top: 18px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+ul {
+  margin-top: 10px;
+  margin-left: 25px;
+
+  li {
+    margin-top: 6px;
+  }
+
+}
+
+b {
+  color: #000;
+}

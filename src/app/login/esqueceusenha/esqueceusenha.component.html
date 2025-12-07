@@ -1,0 +1,22 @@
+<div class="esqueceusenha">
+  <h1>Insira seu email que deseja mudar a senha</h1>
+
+  <form [formGroup]="esqueceusenhaForm">
+    <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <p class="requisitos"
+    [hidden]="!(esqueceusenhaForm.get('email')?.invalid && esqueceusenhaForm.get('email')?.touched)">
+   *Digite um email válido
+    </p>
+    <button type="submit" class="botao-mudar" [disabled]="esqueceusenhaForm.invalid" (click)="enviarEmail()">
+      Mudar senha
+    </button>
+    <div>
+      @if (mensagem){
+        {{mensagem}}
+      }
+    </div>
+  </form>

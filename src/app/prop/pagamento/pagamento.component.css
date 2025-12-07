@@ -1,0 +1,70 @@
+.container-pagamento {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #000000;
+}
+
+.conteudo {
+  flex: 1;
+  text-align: center;
+}
+
+.conteudo h1 {
+  font-size: 37px;
+  color: #000;
+}
+
+.descricao {
+  font-size: 17px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.beneficios {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beneficios li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.beneficios b {
+  font-size: 19px;
+}
+
+.check {
+  color: #3A95DF;
+  margin-right: 8px;
+}
+
+.botao-comprar {
+  width: 14%;
+  padding: 12px;
+  background-color: #3A95DF;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.botao-comprar:hover {
+  transform: scale(1.1);
+}
+
+.pagamento-seguro {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,65 @@
+<div class="registrar">
+  <h1>Insira seus dados</h1>
+
+  <form [formGroup]="registrarForm" (ngSubmit)="navigateToInicioCliente()">
+
+    <input
+      type="text"
+      placeholder="Nome"
+      formControlName="nome"
+    />
+    <p class="requisitos"
+       [hidden]="!(registrarForm.get('nome')?.invalid && registrarForm.get('nome')?.touched)">
+      *Digite um nome válido
+    </p>
+
+    <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <p class="requisitos"
+       [hidden]="!(registrarForm.get('email')?.invalid && registrarForm.get('email')?.touched)">
+      *Digite um email válido
+    </p>
+
+    <input
+      type="password"
+      placeholder="Senha"
+      formControlName="senha"
+      (focus)="mostrarRequisito = true"
+      (blur)="mostrarRequisito = false"
+    />
+    <p class="requisitos" [hidden]="!mostrarRequisito">
+      *Sua senha deve ter ao menos 6 caracteres
+    </p>
+
+    <input
+      type="password"
+      placeholder="Confirme sua senha"
+      formControlName="confirmarSenha"
+    />
+    <p class="requisitos"
+       [hidden]="!(registrarForm.hasError('senhasDiferentes') && registrarForm.get('confirmarSenha')?.touched)">
+      As senhas não coincidem!
+    </p>
+
+    <div class="terms-container">
+      <input type="checkbox" id="terms" formControlName="aceitouTermos" />
+      <label for="terms">
+        Aceito os <a (click)="navigateToLgpd()">termos de uso</a>
+      </label>
+    </div>
+
+    <button type="submit" class="registrar-botao" [disabled]="registrarForm.invalid" (click)="navigateToInicioCliente()">
+      Registrar
+    </button>
+  </form>
+
+  <p class="login-texto">
+    Já tem uma conta?
+  </p>
+  <a class="login-link" (click)="navigateToLoginCliente()">
+    Entre agora!
+  </a>
+</div>

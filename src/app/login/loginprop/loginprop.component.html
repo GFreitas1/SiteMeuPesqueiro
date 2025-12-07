@@ -1,0 +1,40 @@
+<div class="login">
+  <h1>Insira seus dados</h1>
+
+  <form [formGroup]="loginForm" (ngSubmit)="navigateToPagamento()">
+    <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <p class="requisitos"
+       [hidden]="!(loginForm.get('email')?.invalid && loginForm.get('email')?.touched)">
+      *Digite um email válido
+    </p>
+
+    <input
+      type="password"
+      placeholder="Senha"
+      formControlName="senha"
+    />
+    <p class="requisitos"
+       [hidden]="!(loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched)">
+      *Digite uma senha válida, mínimo de 6 caracteres
+    </p>
+
+    <a class="esqueceu-senha" (click)="navigateToEsqueceuSenha()">
+      Esqueceu sua senha?
+    </a>
+
+    <button type="submit" class="login-botao" [disabled]="loginForm.invalid" (click)="navigateToPagamento()">
+      Login
+    </button>
+  </form>
+
+  <p class="cadastrar-texto">
+    Ainda não tem uma conta?
+  </p>
+  <a class="cadastrar-link" (click)="navigateToCadastrarProp()">
+    Crie agora!
+  </a>
+</div>

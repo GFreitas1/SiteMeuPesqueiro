@@ -1,0 +1,70 @@
+.login {
+  max-width: 450px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.esqueceu-senha {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #1e90ff;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.esqueceu-senha:hover{
+  text-decoration: underline;
+}
+
+.login-botao {
+  width: 55%;
+  padding: 12px;
+  background-color: #3A95DF;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login-botao:hover {
+  transform: scale(1.1);
+}
+
+.cadastrar-texto {
+  margin-top: 15px;
+}
+
+.cadastrar-link {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.cadastrar-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.requisitos {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}

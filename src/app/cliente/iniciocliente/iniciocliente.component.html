@@ -1,0 +1,93 @@
+<div class="app-container">
+
+  <div class="content">
+    <aside class="sidebar">
+      <h3>Pesqueiros próximos de você</h3>
+
+      @for (p of pesqueiros; track p.id) {
+        <div
+          class="list-item"
+          (click)="selecionarPesqueiro(p.id)"
+          [class.active]="selecionado.id === p.id"
+        >
+          <img [src]="p.imagens?.[0]" [alt]="p.nome" />
+          <div class="meta">
+            <strong>{{ p.nome }}</strong>
+            <div class="avaliacao">{{ p.avaliacao }}</div>
+          </div>
+        </div>
+      }
+    </aside>
+
+    <main class="main-panel">
+      <h2>{{ selecionado.nome }}</h2>
+
+      <div class="middle-row">
+        <div class="image-box">
+          <div class="carousel">
+            <button class="nav prev" (click)="voltarImagem()">❮</button>
+            <img
+              [src]="selecionado.imagens?.[indiceImagem]"
+              alt="foto do pesqueiro"
+            />
+            <button class="nav next" (click)="avancarImagem()">❯</button>
+          </div>
+
+          <div class="carousel-dots">
+            @for (img of selecionado.imagens; track $index) {
+              <span
+                class="dot"
+                [class.active]="$index === indiceImagem"
+                (click)="mudarImagem($index)"
+              ></span>
+            }
+          </div>
+        </div>
+
+        <div class="address-box">
+          <h4>Endereço do pesqueiro</h4>
+          <div class="address">{{ selecionado.endereco }}</div>
+          <h4 class="stars">Avaliações</h4>
+          <div class="avaliacoes">
+
+            <span class="avaliacao">{{ selecionado.avaliacao }}</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="info">
+        <h4>Informações do pesqueiro</h4>
+        <div class="info-box">{{ selecionado.descricao }}</div>
+      </section>
+
+ <section class="avaliar">
+  <h4>Escreva uma avaliação</h4>
+
+  <div class="avaliacao-input">
+  <ng-container *ngFor="let s of estrelas">
+    <span
+      class="estrela"
+      style="cursor: pointer;"
+      (click)="definirNota(s)"
+      (mouseenter)="hoverEstrela = s"
+      (mouseleave)="hoverEstrela = 0"
+      [class.preenchida]="s <= (hoverEstrela || notaSelecionada)"
+      >★</span
+    >
+  </ng-container>
+
+  <span class="nota-num">{{ notaSelecionada }} / 5</span>
+</div>
+
+
+  <textarea
+    [(ngModel)]="novaAvaliacao"
+    placeholder="Digite sua opinião..."
+  ></textarea>
+
+  <button (click)="enviarAvaliacao()">Enviar</button>
+</section>
+
+    </main>
+  </div>
+</div>
