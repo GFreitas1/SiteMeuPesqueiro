@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
   selector: 'app-cadastroprop',
-  imports: [ ReactiveFormsModule],
+  imports: [ ReactiveFormsModule, HeaderComponent],
   templateUrl: './cadastroprop.component.html',
   styleUrl: './cadastroprop.component.css'
 })
@@ -19,6 +20,7 @@ export class CadastropropComponent {
         email: ['', [Validators.required, Validators.email]],
         senha: ['', [Validators.required, Validators.minLength(6)]],
         confirmarSenha: ['', [Validators.required]],
+        aceitouTermos: [false, Validators.requiredTrue],
       },
       { validators: this.senhasIguaisValidator }
     );

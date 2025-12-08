@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeadercadastradoComponent } from '../../shared/headercadastrado/headercadastrado.component';
 
 @Component({
   selector: 'app-pagamento',
-  imports: [],
+  imports: [HeadercadastradoComponent],
   templateUrl: './pagamento.component.html',
   styleUrls: ['./pagamento.component.css']
 })

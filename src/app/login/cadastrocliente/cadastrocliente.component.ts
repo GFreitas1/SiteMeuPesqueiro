@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
   selector: 'app-cadastrocliente',
-  imports: [ ReactiveFormsModule],
+  imports: [ ReactiveFormsModule, HeaderComponent],
   templateUrl: './cadastrocliente.component.html',
   styleUrl: './cadastrocliente.component.css'
 })
@@ -41,7 +42,7 @@ export class CadastroclienteComponent {
   navigateToLoginCliente(): void {
     this.router.navigate(['/logincliente']);
   }
-  
+
   navigateToLgpd(): void {
     this.router.navigate(['/lgpd']);
   }

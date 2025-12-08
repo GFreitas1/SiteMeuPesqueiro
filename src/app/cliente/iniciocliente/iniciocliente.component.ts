@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HeadercadastradoComponent } from '../../shared/headercadastrado/headercadastrado.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 interface Pesqueiro {
   id: string;
@@ -15,7 +17,7 @@ interface Pesqueiro {
 @Component({
   selector: 'app-iniciocliente',
   standalone: true,
-  imports: [ FormsModule, CommonModule],
+  imports: [ FormsModule, CommonModule, HeadercadastradoComponent, FooterComponent],
   templateUrl: './iniciocliente.component.html',
   styleUrl: './iniciocliente.component.css'
 })

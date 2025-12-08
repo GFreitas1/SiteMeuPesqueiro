@@ -18,4 +18,5 @@ export class HeaderComponent {
   navigateToHome(): void {
     this.router.navigate(['/home']);
   }
+
 }

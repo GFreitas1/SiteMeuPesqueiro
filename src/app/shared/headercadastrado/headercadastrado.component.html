@@ -1,0 +1,18 @@
+<nav class="header">
+  <div class="logo" (click)="navigateToHome()">
+    <a><img [src]="imglogo" class="logo-img" /></a>
+    <p class="txtheader"><a>Meu Pesqueiro</a></p>
+  </div>
+
+  <div class="menu" (click)="toggleMenu()">
+    <img [src]="usericon" class="user-icon-img" />
+    <p class="nome-usuario">{{ nomeUsuario }}</p>
+
+    @if (menuAberto) {
+      <div class="menu-usuario">
+        <button (click)="alterarInformacoes()">Alterar informações</button>
+        <button (click)="sair()">Sair</button>
+      </div>
+    }
+  </div>
+</nav>
