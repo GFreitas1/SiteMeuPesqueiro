@@ -25,10 +25,6 @@ export class HeadercadastradoComponent {
     this.menuAberto = !this.menuAberto;
   }
 
-  alterarInformacoes(): void {
-    this.menuAberto = false;
-    this.router.navigate(['/alterarinformacoes']);
-  }
 
   sair(): void {
     this.menuAberto = false;

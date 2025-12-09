@@ -102,5 +102,13 @@ enviarAvaliacao() {
     alert('Por favor, escreva uma opinião e selecione uma nota.');
   }
 }
+get nota(): string {
+  return this.selecionado.avaliacao?.split(' ')[1] || '';
+}
+
+get qtdAvaliacoes(): string {
+  const match = this.selecionado.avaliacao?.match(/\((.*?)\)/);
+  return match ? match[1] : '';
+}
 
 }

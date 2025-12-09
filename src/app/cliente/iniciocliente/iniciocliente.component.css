@@ -142,14 +142,25 @@
 .avaliacoes {
   margin-top: 4px;
 }
+
 .estrela {
-  color: gold;
-  font-size: 22px;
+  color: rgb(199, 195, 195);
+  font-size: 26px;
+  transition: color 0.2s;
 }
-.avaliacao {
+
+.estrela.preenchida {
   color: gold;
-  
 }
+
+.nota{
+  color: gold;
+}
+
+.qtd {
+  color: black;
+}
+
 .nota {
   margin-left: 8px;
   font-weight: bold;
